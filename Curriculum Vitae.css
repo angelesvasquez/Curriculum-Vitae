@@ -1,0 +1,84 @@
+html, body{ 
+    font-family: Arial, sans-serif;
+  }
+.grid-container{
+    display: grid;
+    width: 1000px;
+    margin: 30px auto ;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 250px 1100px;
+    grid-template-areas: 
+    "encabezado encabezado encabezado"
+    "lateral contenido contenido";
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.encabezado{
+    grid-area: encabezado;
+    background: rgb(88, 88, 88);
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    
+}
+.text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    text-align: center; 
+    flex: 1;
+}
+.encabezado h1{
+    margin: 0;
+    font-size: 24px;
+}
+.encabezado h2{
+    margin: 5px 0;
+    font-size: 18px;
+    color: white;
+}
+.encabezado img {
+    border-radius: 50%; 
+    width: 150px;
+    height: 150px;
+    object-fit: cover; 
+    margin-right: 20px; 
+}
+.lateral{
+    grid-area: lateral;
+    background: rgb(242, 242, 242);
+    padding: 20px 30px;
+}
+.lateral h3, .contenido h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 3px solid #000; 
+    padding-bottom: 5px; 
+}
+.contenido{
+    padding: 20px 30px;
+    grid-area: contenido;
+    background: rgb(255, 255, 255);
+}
+.contenido h4 {
+    font-size: 20px;
+    margin-top: 20px;
+    color: #333;
+}
+.contenido p, .lateral p{
+    line-height: 1.5;
+}
+.contenido em {
+    font-size: 18px;
+    color: #777;
+}
+.lateral ul li {
+    margin-bottom: 15px;
+}
+.contenido ul li {
+    margin-bottom: 12px;
+}
